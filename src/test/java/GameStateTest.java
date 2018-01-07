@@ -1,5 +1,6 @@
 import game.GameState;
 import game.GameStateImpl;
+import game.Player;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -16,9 +17,9 @@ public class GameStateTest {
         gs.changeState(0,false);
         gs.changeState(1,false);
         gs.changeState(2,false);
-        String winner = gs.findWinner();
+        Player winner = gs.findWinner();
         Assert.assertNotNull(winner);
-        Assert.assertEquals(winner, "Computer");
+        Assert.assertEquals(winner, Player.COMPUTER);
     }
     @Test
     public void shouldFindComputerAsAWinner2(){
@@ -31,9 +32,9 @@ public class GameStateTest {
         gs.changeState(0,false);
         gs.changeState(3,false);
         gs.changeState(6,false);
-        String winner = gs.findWinner();
+        Player winner = gs.findWinner();
         Assert.assertNotNull(winner);
-        Assert.assertEquals(winner, "Computer");
+        Assert.assertEquals(winner, Player.COMPUTER);
     }
 
     @Test
@@ -47,9 +48,9 @@ public class GameStateTest {
         gs.changeState(0,false);
         gs.changeState(4,false);
         gs.changeState(8,false);
-        String winner = gs.findWinner();
+        Player winner = gs.findWinner();
         Assert.assertNotNull(winner);
-        Assert.assertEquals(winner, "Computer");
+        Assert.assertEquals(winner, Player.COMPUTER);
     }
 
     @Test
@@ -63,9 +64,9 @@ public class GameStateTest {
         gs.changeState(2,false);
         gs.changeState(4,false);
         gs.changeState(6,false);
-        String winner = gs.findWinner();
+        Player winner = gs.findWinner();
         Assert.assertNotNull(winner);
-        Assert.assertEquals(winner, "Computer");
+        Assert.assertEquals(winner, Player.COMPUTER);
     }
 
     @Test
@@ -83,9 +84,9 @@ public class GameStateTest {
         gs.changeState(2,false);
         gs.changeState(4,false);
         gs.changeState(5,false);
-        String winner = gs.findWinner();
+        Player winner = gs.findWinner();
         Assert.assertNotNull(winner);
-        Assert.assertEquals(winner, "You");
+        Assert.assertEquals(winner, Player.HUMAN);
     }
 
     @Test
@@ -105,8 +106,8 @@ public class GameStateTest {
         gs.changeState(5,false);
         gs.changeState(6,false);
         gs.changeState(7,false);
-        String winner = gs.findWinner();
+        Player winner = gs.findWinner();
         Assert.assertNotNull(winner);
-        Assert.assertEquals(winner, "You");
+        Assert.assertEquals(winner, Player.HUMAN);
     }
 }

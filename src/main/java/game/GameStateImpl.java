@@ -20,7 +20,9 @@ public class GameStateImpl implements GameState {
 
     @Override
     public Boolean isEndOfGame() {
-        if (treeTheSameInRow(FieldValue.EMPTY, Boolean.FALSE) || threeTheSameInColumn(FieldValue.EMPTY, Boolean.FALSE) || threeTheSameDiagonally()) {
+        if (treeTheSameInRow(FieldValue.EMPTY, Boolean.FALSE)
+                || threeTheSameInColumn(FieldValue.EMPTY, Boolean.FALSE)
+                || threeTheSameDiagonally()) {
             return Boolean.TRUE;
         }
         return Boolean.FALSE;
@@ -46,11 +48,11 @@ public class GameStateImpl implements GameState {
     }
 
     @Override
-    public String findWinner() {
+    public Player findWinner() {
         if(isComputerWinner()){
-            return "Computer";
+            return Player.COMPUTER;
         } else {
-            return "You";
+            return Player.HUMAN;
         }
     }
 

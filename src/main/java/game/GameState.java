@@ -7,5 +7,5 @@ public interface GameState {
 
     Integer computersMove();
 
-    String findWinner();
+    Player findWinner();
 }

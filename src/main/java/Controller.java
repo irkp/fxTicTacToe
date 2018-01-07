@@ -1,5 +1,7 @@
 import game.GameState;
 import game.GameStateImpl;
+import game.Player;
+import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.Parent;
@@ -40,7 +42,7 @@ public class Controller {
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setTitle("THE END!");
         alert.setHeaderText(null);
-        String winner = gameState.findWinner();
+        String winner = Player.HUMAN.equals(gameState.findWinner()) ? "You" : "Computer";
         alert.setContentText("The Winner is: " + winner + "!");
         alert.showAndWait();
     }
