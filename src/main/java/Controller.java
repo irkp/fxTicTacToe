@@ -11,10 +11,6 @@ public class Controller {
     private GameState gameState;
     private static Controller ourInstance = new Controller();
 
-    public static Controller getInstance() {
-        return ourInstance;
-    }
-
     public Controller() {
         this.gameState = new GameStateImpl();
     }
@@ -23,11 +19,11 @@ public class Controller {
     public void pressField(ActionEvent actionEvent) {
         Button button = (Button) actionEvent.getSource();
         Integer fieldId = Integer.parseInt(button.getId());
-        gameState.changeState(fieldId);
+        gameState.changeState(fieldId, Boolean.TRUE);
         button.setText("X");
         button.setDisable(Boolean.TRUE);
         if (gameState.isEndOfGame()) {
-            endOfGameAlert();
+            endGame();
         } else {
             Integer chosenField = gameState.computersMove();
             Parent parent = button.getParent();
@@ -35,18 +31,17 @@ public class Controller {
             chosenButton.setText("O");
             chosenButton.setDisable(Boolean.TRUE);
             if (gameState.isEndOfGame()) {
-                endOfGameAlert();
+                endGame();
             }
         }
     }
 
-    private void endOfGameAlert() {
+    private void endGame() {
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
-        alert.setTitle("end");
+        alert.setTitle("THE END!");
         alert.setHeaderText(null);
-        alert.setContentText("thants only temporary message, here will be result of the game.");
+        String winner = gameState.findWinner();
+        alert.setContentText("The Winner is: " + winner + "!");
         alert.showAndWait();
     }
-
-
 }

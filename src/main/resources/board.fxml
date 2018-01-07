@@ -7,7 +7,7 @@
           fx:controller="Controller" xmlns:fx="http://javafx.com/fxml">
 
     <stylesheets>
-        <URL value="@style/Style.css"/>
+        <URL value="@Style.css"/>
     </stylesheets>
 
     <Button id="0" GridPane.columnIndex="0" GridPane.rowIndex="0" onAction="#pressField"/>
