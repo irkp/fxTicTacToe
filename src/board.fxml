@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import java.net.URL?>
+<GridPane styleClass="gridPane"
+          fx:controller="Controller" xmlns:fx="http://javafx.com/fxml">
+
+    <stylesheets>
+        <URL value="@style/Style.css"/>
+    </stylesheets>
+
+    <Button id="0" GridPane.columnIndex="0" GridPane.rowIndex="0" onAction="#pressField"/>
+    <Button id="1" GridPane.columnIndex="1" GridPane.rowIndex="0" onAction="#pressField"/>
+    <Button id="2" GridPane.columnIndex="2" GridPane.rowIndex="0" onAction="#pressField"/>
+    <Button id="3" GridPane.columnIndex="0" GridPane.rowIndex="1" onAction="#pressField"/>
+    <Button id="4" GridPane.columnIndex="1" GridPane.rowIndex="1" onAction="#pressField"/>
+    <Button id="5" GridPane.columnIndex="2" GridPane.rowIndex="1" onAction="#pressField"/>
+    <Button id="6" GridPane.columnIndex="0" GridPane.rowIndex="2" onAction="#pressField"/>
+    <Button id="7" GridPane.columnIndex="1" GridPane.rowIndex="2" onAction="#pressField"/>
+    <Button id="8" GridPane.columnIndex="2" GridPane.rowIndex="2" onAction="#pressField"/>
+</GridPane>

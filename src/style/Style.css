@@ -1,0 +1,26 @@
+.root {
+    -fx-background-color: #626262;
+    -fx-pref-width: 300;
+    -fx-pref-height: 300;
+}
+
+.button {
+    -fx-text-fill: white;
+    -fx-font-family: "Tahoma";
+    -fx-font-weight: bold;
+    -fx-background-color: linear-gradient(#353535, #212121);
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.6), 5, 0.0, 0, 1);
+    -fx-max-width: 90;
+    -fx-min-width: 90;
+    -fx-pref-height: 90;
+    -fx-font-size: 32;
+    -fx-border-color: #b9b9b9;
+}
+
+.button:hover {
+    -fx-background-color: linear-gradient(#505050, #878787);
+}
+
+.gridPane{
+    -fx-alignment: center;
+}
